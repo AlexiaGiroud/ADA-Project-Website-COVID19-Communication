@@ -7,6 +7,7 @@ import { Team } from "./components/Team";
 import { Navbar } from "./components/Navbar";
 import { DataSection } from "./components/DataSection";
 import { Conclusion } from "./components/Conclusion";
+import { CovidStats } from "./components/CovidStats";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <div id="home">
         <Hero />
       </div>
+      <CovidStats />
       <div id="findings" className="bg-[#000000]">
         <KeyFindings />
       </div>
