@@ -1,3 +1,5 @@
+import { Github } from 'lucide-react';
+
 const team = [
   {
     name: 'Alexia Giroud Nyer',
@@ -149,6 +151,16 @@ export function Team() {
               <p className="text-xs text-gray-500 italic mt-3">
                 {member.description}
               </p>
+              
+              <div className="mt-4 flex justify-center">
+                <a 
+                  href="#" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={`${member.name} GitHub`}
+                >
+                  <Github size={20} />
+                </a>
+              </div>
             </div>
           ))}
         </div>
