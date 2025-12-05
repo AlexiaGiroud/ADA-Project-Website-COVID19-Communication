@@ -20,7 +20,9 @@ export function Links() {
           </a>
           
           <a
-            href="#"
+            href="https://github.com/epfl-ada/ada-2025-project-avadakedavra25.git"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-to-br from-[#C07DFF] to-[#F29900] rounded-2xl p-8 text-center hover:transform hover:scale-105 transition-all group"
           >
             <Code size={40} className="mx-auto mb-4 text-white" />
