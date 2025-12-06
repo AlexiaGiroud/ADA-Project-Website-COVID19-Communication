@@ -7,13 +7,12 @@ const dataSubsections = [
     title: "Who is in the dataset?",
     color: "#C07DFF",
     image: imgWhoIsIn,
-    iframeUrl: "stacked_celltype_by_status_plotly.html",
+    iframeUrls: ["stacked_celltype_by_status_plotly.html", "umap_website.html"],
   },
   {
     title: "What is in a Single Cell Analysis?",
     color: "#C07DFF",
     image: imgSingleCell,
-    iframeUrl: "umap_website.html",
   },
   {
     title: "From Raw Data into Insights?",
@@ -79,10 +78,27 @@ export function DataSection() {
             </div>
 
             {/* Right column - 75% - Content */}
-            <div className="md:w-3/4">
-              {section.iframeUrl ? (
+            <div className="md:w-3/4 flex flex-col gap-8">
+              {section.iframeUrls ? (
+                section.iframeUrls.map((url, i) => (
+                  <div
+                    key={i}
+                    className="w-full h-[800px] rounded-2xl overflow-hidden"
+                    style={{
+                      borderWidth: "2px",
+                      borderColor: section.color,
+                    }}
+                  >
+                    <iframe
+                      src={`${import.meta.env.BASE_URL}${url}`}
+                      className="w-full h-full border-0 bg-white"
+                      title={`${section.title} - Figure ${i + 1}`}
+                    />
+                  </div>
+                ))
+              ) : section.iframeUrl ? (
                 <div
-                  className="w-full h-[600px] rounded-2xl overflow-hidden"
+                  className="w-full h-[800px] rounded-2xl overflow-hidden"
                   style={{
                     borderWidth: "2px",
                     borderColor: section.color,
