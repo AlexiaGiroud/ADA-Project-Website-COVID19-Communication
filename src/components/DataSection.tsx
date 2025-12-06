@@ -94,7 +94,7 @@ export function DataSection() {
                 ))
               ) : section.iframeUrl ? (
                 <div
-                  className="w-full h-[1000px] rounded-2xl overflow-hidden"
+                  className="w-full h-full rounded-2xl overflow-hidden"
                 >
                   <iframe
                     src={`${import.meta.env.BASE_URL}${section.iframeUrl}`}
