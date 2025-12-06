@@ -7,11 +7,13 @@ const dataSubsections = [
     title: "Who is in the dataset?",
     color: "#C07DFF",
     image: imgWhoIsIn,
+    iframeUrl: "stacked_celltype_by_status_plotly.html",
   },
   {
     title: "What is in a Single Cell Analysis?",
     color: "#C07DFF",
     image: imgSingleCell,
+    iframeUrl: "umap_website.html",
   },
   {
     title: "From Raw Data into Insights?",
@@ -78,27 +80,43 @@ export function DataSection() {
 
             {/* Right column - 75% - Content */}
             <div className="md:w-3/4">
-              <div
-                className="rounded-2xl p-8 min-h-[400px] flex items-center justify-center overflow-hidden"
-                style={{
-                  borderWidth: "2px",
-                  borderColor: section.color,
-                  backgroundColor: "#1A1A1A",
-                }}
-              >
-                {section.image ? (
-                  <img
-                    src={section.image}
-                    alt={section.title}
-                    className="w-full h-full object-contain rounded-xl"
+              {section.iframeUrl ? (
+                <div
+                  className="w-full h-[600px] rounded-2xl overflow-hidden"
+                  style={{
+                    borderWidth: "2px",
+                    borderColor: section.color,
+                  }}
+                >
+                  <iframe
+                    src={`${import.meta.env.BASE_URL}${section.iframeUrl}`}
+                    className="w-full h-full border-0 bg-white"
+                    title={section.title}
                   />
-                ) : (
-                  <p className="text-gray-400 text-center">
-                    [Visualization placeholder for{" "}
-                    {section.title}]
-                  </p>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div
+                  className="rounded-2xl p-8 min-h-[400px] flex items-center justify-center overflow-hidden"
+                  style={{
+                    borderWidth: "2px",
+                    borderColor: section.color,
+                    backgroundColor: "#1A1A1A",
+                  }}
+                >
+                  {section.image ? (
+                    <img
+                      src={section.image}
+                      alt={section.title}
+                      className="w-full h-full object-contain rounded-xl"
+                    />
+                  ) : (
+                    <p className="text-gray-400 text-center">
+                      [Visualization placeholder for{" "}
+                      {section.title}]
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         ))}
