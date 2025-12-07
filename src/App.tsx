@@ -6,7 +6,6 @@ import { Links } from "./components/Links";
 import { Team } from "./components/Team";
 import { Navbar } from "./components/Navbar";
 import { DataSection } from "./components/DataSection";
-import { UMAP } from "./components/UMAP";
 import { Conclusion } from "./components/Conclusion";
 import { CovidStats } from "./components/CovidStats";
 
@@ -24,9 +23,7 @@ export default function App() {
       <div id="methodology" className="bg-[#2A2A2A]">
         <Methodology />
       </div>
-      <div id="umap" className="bg-[#2A2A2A]">
-        <UMAP />
-      </div>
+      {/* UMAP section removed */}
       <div id="data" className="bg-[#000000]">
         <DataSection />
       </div>
