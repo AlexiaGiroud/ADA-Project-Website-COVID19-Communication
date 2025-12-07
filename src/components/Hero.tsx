@@ -1,4 +1,3 @@
-import bundledHero from "../assets/abae2ce4402ffd267d03df7476134886e0fe5379.png";
 import { useEffect, useState } from "react";
 
 function Content() {
@@ -12,19 +11,16 @@ function Content() {
 }
 
 export function Hero() {
-  const [src, setSrc] = useState<string>(bundledHero);
+  // Fallback to the built asset path on GitHub Pages; prefer a `public/hero.png` if provided.
+  const fallback = '/avADAkedavra25_website/assets/abae2ce4402ffd267d03df7476134886e0fe5379-DHwVpZ4N.png';
+  const [src, setSrc] = useState<string>(fallback);
 
   useEffect(() => {
-    // Prefer a user-provided image placed in `public/hero.png` (served from base URL).
-    // If the file exists, use it; otherwise fall back to the bundled asset.
-    const base = import.meta.env.BASE_URL || '/';
-    const candidate = `${base}hero.png`;
-
-    // probe with HEAD to avoid downloading full image if missing
+    const candidate = '/avADAkedavra25_website/hero.png';
     fetch(candidate, { method: 'HEAD' }).then(res => {
       if (res.ok) setSrc(candidate);
     }).catch(() => {
-      /* ignore and keep bundledHero */
+      // keep fallback
     });
   }, []);
 

@@ -1,6 +1,7 @@
-import imgBackground from "../assets/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png";
-import imgSingleCell from "../assets/93be32fb021fefefaa0ce0e541b1371082525cff.png";
-import imgRawData from "../assets/a86c4713b836193b96a3ed13c114acc3f0fd91db.png";
+// Use published asset paths (served from the site's base) instead of importing image modules
+const imgBackground = '/avADAkedavra25_website/assets/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png';
+const imgSingleCell = '/avADAkedavra25_website/assets/93be32fb021fefefaa0ce0e541b1371082525cff.png';
+const imgRawData = '/avADAkedavra25_website/assets/a86c4713b836193b96a3ed13c114acc3f0fd91db.png';
 
 const dataSubsections = [
   {
