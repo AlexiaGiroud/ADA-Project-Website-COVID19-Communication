@@ -10,14 +10,10 @@ const dataSubsections = [
     figures: [
       {
         type: "iframe",
-        src: "https://alexiagiroud.github.io/ADA-Project-Website-COVID19-Communication/umap_website.html",
-        title: "UMAP Visualization",
-      },
-      {
-        type: "iframe",
-        src: "https://alexiagiroud.github.io/ADA-Project-Website-COVID19-Communication/stacked_celltype_by_status_plotly.html",
+        src: "stacked_celltype_by_status_plotly.html",
         title: "Stacked Cell Type Distribution",
       },
+      // UMAP removed: only keeping the stacked cell type figure here
     ],
   },
   {
