@@ -1,6 +1,7 @@
 import imgWhoIsIn from "../assets/who_is_in_dataset.png";
 import imgSingleCell from "../assets/what_is_in_a_single_cell_analysis.png";
 import imgRawData from "../assets/from_raw_data_to_insights.png";
+import AutoIframe from "./AutoIframe";
 
 const dataSubsections = [
   {
@@ -87,41 +88,33 @@ export function DataSection() {
             <div className="md:w-3/4 flex flex-col gap-8">
               {section.iframeUrls ? (
                 section.iframeUrls.map((url, i) => (
-                  <div
-                    key={i}
-                    className="w-full h-[1000px] rounded-2xl overflow-hidden"
-                  >
-                    <iframe
+                  <div key={i} className="w-full rounded-2xl">
+                    <AutoIframe
                       src={`${import.meta.env.BASE_URL}${url}`}
-                      className="w-full h-[1000px] border-0 bg-white"
+                      className="w-full border-0 bg-white"
                       title={`${section.title} - Figure ${i + 1}`}
-                      loading="lazy"
                     />
                   </div>
                 ))
               ) : section.iframeUrl ? (
-                <div
-                  className="w-full h-full rounded-2xl overflow-hidden"
-                >
-                  <iframe
+                <div className="w-full rounded-2xl">
+                  <AutoIframe
                     src={`${import.meta.env.BASE_URL}${section.iframeUrl}`}
-                    className="w-full h-full border-0 bg-white"
+                    className="w-full border-0 bg-white"
                     title={section.title}
-                    loading="lazy"
                   />
                 </div>
               ) : (
                 <div
-                  className="rounded-2xl p-8 min-h-[400px] flex items-center justify-center overflow-hidden"
+                  className="rounded-2xl p-8 min-h-[400px] flex items-center justify-center"
                   style={{
                     borderWidth: "2px",
                     borderColor: section.color,
                     backgroundColor: "#1A1A1A",
+                    overflow: "visible",
                   }}
                 >
-                  <p className="text-gray-400 text-center">
-                    Relevant figures will be there
-                  </p>
+                  <p className="text-gray-400 text-center">Relevant figures will be there</p>
                 </div>
               )}
             </div>
