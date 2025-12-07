@@ -1,6 +1,6 @@
-import imgBackground from "figma:asset/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png";
-import imgSingleCell from "figma:asset/93be32fb021fefefaa0ce0e541b1371082525cff.png";
-import imgRawData from "figma:asset/a86c4713b836193b96a3ed13c114acc3f0fd91db.png";
+import imgBackground from "../assets/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png";
+import imgSingleCell from "../assets/93be32fb021fefefaa0ce0e541b1371082525cff.png";
+import imgRawData from "../assets/a86c4713b836193b96a3ed13c114acc3f0fd91db.png";
 
 const dataSubsections = [
   {
