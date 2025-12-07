@@ -4,8 +4,6 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/avADAkedavra25_website/',
-
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -19,6 +17,10 @@
         'next-themes@0.4.6': 'next-themes',
         'lucide-react@0.487.0': 'lucide-react',
         'input-otp@1.4.2': 'input-otp',
+        'figma:asset/abae2ce4402ffd267d03df7476134886e0fe5379.png': path.resolve(__dirname, './src/assets/abae2ce4402ffd267d03df7476134886e0fe5379.png'),
+        'figma:asset/a86c4713b836193b96a3ed13c114acc3f0fd91db.png': path.resolve(__dirname, './src/assets/a86c4713b836193b96a3ed13c114acc3f0fd91db.png'),
+        'figma:asset/93be32fb021fefefaa0ce0e541b1371082525cff.png': path.resolve(__dirname, './src/assets/93be32fb021fefefaa0ce0e541b1371082525cff.png'),
+        'figma:asset/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png': path.resolve(__dirname, './src/assets/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png'),
         'embla-carousel-react@8.6.0': 'embla-carousel-react',
         'cmdk@1.1.1': 'cmdk',
         'class-variance-authority@0.7.1': 'class-variance-authority',
@@ -53,7 +55,7 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'docs',
+      outDir: 'build',
     },
     server: {
       port: 3000,

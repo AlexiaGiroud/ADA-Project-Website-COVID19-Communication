@@ -112,7 +112,7 @@ export function Team() {
   return (
     <section className="px-6 py-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl text-white text-center mb-4">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tight mb-4" style={{ fontWeight: 900 }}>
           Meet the Team
         </h2>
         <p className="text-xl text-gray-300 text-center mb-12 max-w-2xl mx-auto">
@@ -158,7 +158,7 @@ export function Team() {
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={`${member.name} GitHub`}
                 >
-                  <Github size={20} />
+                  <Github size={30} />
                 </a>
               </div>
             </div>

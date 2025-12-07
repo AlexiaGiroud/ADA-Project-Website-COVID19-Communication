@@ -4,6 +4,9 @@ export function Links() {
   return (
     <section className="px-6 py-16 bg-[#1A1A1A]">
       <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tight mb-16" style={{ fontWeight: 900 }}>
+          More
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a
             href="https://www.nature.com/articles/s41591-021-01329-2"

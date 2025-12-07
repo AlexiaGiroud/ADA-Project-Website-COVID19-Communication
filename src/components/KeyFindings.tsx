@@ -3,26 +3,26 @@ import { MessageSquare, Activity, Network, TrendingDown } from 'lucide-react';
 const findings = [
   {
     icon: MessageSquare,
-    title: 'Disrupted Communication',
-    description: 'Severe COVID-19 shows significantly altered cell-to-cell signaling patterns, particularly in T cell and monocyte interactions.',
+    title: 'Finding 1',
+    description: '💡 Write your key findings here',
     color: '#D61C8C',
   },
   {
     icon: Network,
-    title: 'Network Breakdown',
-    description: 'Critical cases exhibit a collapse in dendritic cell communication networks, limiting effective immune coordination.',
+    title: 'Finding 2',
+    description: '💡 Write your key findings here',
     color: '#C07DFF',
   },
   {
     icon: Activity,
-    title: 'Receptor Expression',
-    description: 'Ligand-receptor pair analysis reveals specific signaling pathways that are upregulated or downregulated based on severity.',
+    title: 'Finding 3',
+    description: '💡 Write your key findings here',
     color: '#F29900',
   },
   {
     icon: TrendingDown,
-    title: 'Predictive Patterns',
-    description: 'Communication signatures can potentially predict disease progression before clinical symptoms worsen.',
+    title: 'Finding 4',
+    description: '💡 Write your key findings here',
     color: '#6811BA',
   },
 ];
@@ -31,7 +31,7 @@ export function KeyFindings() {
   return (
     <section className="px-6 py-16 bg-[#1A1A1A]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl text-white text-center mb-12">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tight mb-16" style={{ fontWeight: 900 }}>
           Key Findings
         </h2>
         

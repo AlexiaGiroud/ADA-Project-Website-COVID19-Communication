@@ -1,11 +1,11 @@
 import { Hero } from "./components/Hero";
 import { CellDistributionChart } from "./components/CellDistributionChart";
 import { KeyFindings } from "./components/KeyFindings";
-import { Methodology } from "./components/Methodology";
+import { MethodologyInteractive } from "./components/MethodologyInteractive";
 import { Links } from "./components/Links";
 import { Team } from "./components/Team";
 import { Navbar } from "./components/Navbar";
-import { DataSection } from "./components/DataSection";
+import { DataSectionNew } from "./components/DataSectionNew";
 import { Conclusion } from "./components/Conclusion";
 import { CovidStats } from "./components/CovidStats";
 
@@ -21,11 +21,10 @@ export default function App() {
         <KeyFindings />
       </div>
       <div id="methodology" className="bg-[#2A2A2A]">
-        <Methodology />
+        <MethodologyInteractive />
       </div>
-      {/* UMAP section removed */}
       <div id="data" className="bg-[#000000]">
-        <DataSection />
+        <DataSectionNew />
       </div>
       <div id="resources" className="bg-[#2A2A2A]">
         <Links />

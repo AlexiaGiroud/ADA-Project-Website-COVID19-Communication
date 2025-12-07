@@ -25,7 +25,7 @@ export function Methodology() {
   return (
     <section className="px-6 py-16">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl text-white text-center mb-12">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tight mb-16" style={{ fontWeight: 900 }}>
           Methodology
         </h2>
         
