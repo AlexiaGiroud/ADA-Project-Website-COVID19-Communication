@@ -22,15 +22,16 @@ export function SingleCellDataset() {
         </div>
       </div>
 
-      {/* 5.2 Treemap Section (link only — no embed) */}
+      {/* 5.2 Treemap Section (placeholder) */}
       <div className="space-y-6">
-        <div className="rounded-xl p-12 min-h-[300px] flex flex-col items-center justify-center bg-[#1A1A1A]" style={{ borderWidth: '2px', borderColor: '#C07DFF' }}>
-          <p className="text-gray-300 text-lg mb-4 text-center">Treemap interactive figure (not embedded).</p>
-          <a href="/avADAkedavra25_website/treemap_mode_mapped.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C07DFF] text-white px-4 py-2 rounded-md">Open Treemap in new tab</a>
+        <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[300px]">
+          <p className="text-gray-400 text-xl text-center">
+            📊 Place for Treemap interactive figure (placeholder)
+          </p>
         </div>
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
-            📝 What we can see on the UMAP and Treemap.
+            📝 What we can see on the Treemap.
           </p>
         </div>
       </div>
