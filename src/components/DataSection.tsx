@@ -1,7 +1,6 @@
-// Use published asset paths (served from the site's base) instead of importing image modules
-const imgBackground = '/avADAkedavra25_website/assets/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png';
-const imgSingleCell = '/avADAkedavra25_website/assets/93be32fb021fefefaa0ce0e541b1371082525cff.png';
-const imgRawData = '/avADAkedavra25_website/assets/a86c4713b836193b96a3ed13c114acc3f0fd91db.png';
+import imgBackground from "figma:asset/51124e77e3c2f96afd7eb1dc6df942843a3a2cb5.png";
+import imgSingleCell from "figma:asset/93be32fb021fefefaa0ce0e541b1371082525cff.png";
+import imgRawData from "figma:asset/a86c4713b836193b96a3ed13c114acc3f0fd91db.png";
 
 const dataSubsections = [
   {
@@ -11,10 +10,14 @@ const dataSubsections = [
     figures: [
       {
         type: "iframe",
-        src: "stacked_celltype_by_status_plotly.html",
+        src: "https://alexiagiroud.github.io/ADA-Project-Website-COVID19-Communication/umap_website.html",
+        title: "UMAP Visualization",
+      },
+      {
+        type: "iframe",
+        src: "https://alexiagiroud.github.io/ADA-Project-Website-COVID19-Communication/stacked_celltype_by_status_plotly.html",
         title: "Stacked Cell Type Distribution",
       },
-      // UMAP removed: only keeping the stacked cell type figure here
     ],
   },
   {
@@ -98,10 +101,15 @@ export function DataSection() {
               <div className="md:w-3/4 space-y-8">
                 {section.figures.length > 0 ? (
                   section.figures.map((figure, figIndex) => (
-                    <div key={figIndex} className="rounded-xl p-8 min-h-[300px] flex flex-col items-center justify-center bg-[#1A1A1A]" style={{ borderWidth: '2px', borderColor: section.color }}>
-                      <p className="text-gray-300 text-lg mb-4">{figure.title} (interactive figure available)</p>
-                      <a href={`/avADAkedavra25_website/${figure.src}`} target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C07DFF] text-white px-4 py-2 rounded-md">Open figure in new tab</a>
-                    </div>
+                    <iframe
+                      key={figIndex}
+                      src={figure.src}
+                      className="w-full h-[400px] lg:h-[500px] border-0"
+                      title={figure.title}
+                      style={{
+                        background: 'transparent',
+                      }}
+                    />
                   ))
                 ) : (
                   <div 

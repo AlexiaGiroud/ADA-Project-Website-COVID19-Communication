@@ -22,30 +22,34 @@ export function SingleCellDataset() {
         </div>
       </div>
 
-      {/* 5.2 Treemap Section (placeholder) */}
+      {/* 5.2 Treemap Section */}
       <div className="space-y-6">
-        <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[300px]">
-          <p className="text-gray-400 text-xl text-center">
-            📊 Place for Treemap interactive figure (placeholder)
-          </p>
-        </div>
+        <iframe
+          src="https://alexiagiroud.github.io/avADAkedavra25_website/treemap_mode_mapped.html"
+          className="w-full h-[500px] lg:h-[600px] border-0 rounded-xl"
+          title="Treemap Visualization"
+          style={{ background: 'transparent' }}
+        />
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
-            📝 What we can see on the Treemap.
+            📝 What we can see on the UMAP and Treemap.
           </p>
         </div>
       </div>
 
       {/* 5.3 UMAP (Initial Clustering) */}
-      <div className="space-y-6">
-        <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[400px]">
-          <iframe 
-            src="/docs/umap_complete_website.html" 
-            className="w-full h-[850px] border-0"
-            title="UMAP colored by initial clustering"
-          />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 bg-gradient-to-br from-[#D61C8C]/30 via-[#C07DFF]/30 to-[#FFC9E9]/30 rounded-3xl p-2">
+          <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden">
+            <iframe 
+              src="https://alexiagiroud.github.io/avADAkedavra25_website/umap_complete_website.html" 
+              className="w-full h-[850px] border-0"
+              title="UMAP colored by initial clustering"
+              style={{ background: 'transparent' }}
+            />
+          </div>
         </div>
-        <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
+        <div className="lg:col-span-1 bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30 flex items-center">
           <p className="text-gray-300 text-lg">
             📝 Text placeholder for UMAP insights
           </p>

@@ -34,25 +34,27 @@ export function SeveritiesSection() {
 
       {/* 6.3 UMAP per Severity */}
       <div className="space-y-6">
-        <div
-          className="rounded-xl p-12 min-h-[400px] flex items-center justify-center bg-[#1A1A1A]"
-          style={{
-            borderWidth: '2px',
-            borderColor: '#C07DFF',
-          }}
-        >
-          <p className="text-gray-300 text-lg text-center">
-            UMAP visualization removed. See the "Cell-type Proportions" figure below for related views.
+        <iframe
+          src="https://alexiagiroud.github.io/avADAkedavra25_website/umap_website.html"
+          className="w-full h-[500px] lg:h-[600px] border-0 rounded-xl"
+          title="UMAP per Severity"
+          style={{ background: 'transparent' }}
+        />
+        <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
+          <p className="text-gray-300 text-lg">
+            📝 Placeholder text for UMAP per severity insights
           </p>
         </div>
       </div>
 
       {/* 6.4 Cell-type Proportions per Severity */}
       <div className="space-y-6">
-        <div className="rounded-xl p-12 min-h-[300px] flex flex-col items-center justify-center bg-[#1A1A1A]" style={{ borderWidth: '2px', borderColor: '#C07DFF' }}>
-          <p className="text-gray-300 text-lg mb-4">Cell-type Proportions interactive figure (not embedded).</p>
-          <a href="/avADAkedavra25_website/stacked_celltype_by_status_plotly.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#C07DFF] text-white px-4 py-2 rounded-md">Open figure in new tab</a>
-        </div>
+        <iframe
+          src="https://alexiagiroud.github.io/avADAkedavra25_website/stacked_celltype_by_status_plotly.html"
+          className="w-full h-[500px] lg:h-[600px] border-0 rounded-xl"
+          title="Cell-type Proportions"
+          style={{ background: 'transparent' }}
+        />
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
             📝 Placeholder text for cell-type proportions

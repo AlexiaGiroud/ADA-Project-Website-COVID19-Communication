@@ -4,8 +4,6 @@
   import path from 'path';
 
   export default defineConfig({
-    // Base path for GitHub Pages. Adjust to your repo name so assets are referenced correctly.
-    base: '/avADAkedavra25_website/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -57,7 +55,7 @@
     },
     build: {
       target: 'esnext',
-      outDir: 'docs',
+      outDir: 'build',
     },
     server: {
       port: 3000,
