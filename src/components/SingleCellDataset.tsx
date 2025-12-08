@@ -39,9 +39,11 @@ export function SingleCellDataset() {
       {/* 5.3 UMAP (Initial Clustering) */}
       <div className="space-y-6">
         <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[400px]">
-          <p className="text-gray-400 text-xl text-center">
-            📊 Place for UMAP colored by initial clustering
-          </p>
+          <iframe 
+            src="/docs/umap_complete_website.html" 
+            className="w-full h-[850px] border-0"
+            title="UMAP colored by initial clustering"
+          />
         </div>
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
