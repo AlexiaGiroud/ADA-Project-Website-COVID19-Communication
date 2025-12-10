@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import heroBanner from "../assets/HeroBanner.png"; // <-- FIXED PATH
 
-// Use the public hero image so builds don't fail when a local asset import is missing.
-const heroSrc = `${import.meta.env.BASE_URL ?? '/'}hero.png`;
+const heroSrc = heroBanner;
 
 function Content() {
   return (
@@ -34,3 +34,4 @@ export function Hero() {
     </section>
   );
 }
+
