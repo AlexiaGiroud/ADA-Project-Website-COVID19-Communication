@@ -1,4 +1,5 @@
-import imgHero1 from "figma:asset/abae2ce4402ffd267d03df7476134886e0fe5379.png";
+// Use public hero image. Build-time base is available via import.meta.env.BASE_URL
+const heroSrc = `${import.meta.env.BASE_URL ?? '/'}hero.png`;
 
 function Content() {
   return (
@@ -13,7 +14,19 @@ function Content() {
 export function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[500px] max-h-[900px]" data-name="Hero 1">
-      <img alt="" className="absolute inset-0 w-full h-full object-cover pointer-events-none" src={imgHero1} />
+      <img
+        alt="Hero background"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        src={heroSrc}
+        onError={(e) => {
+          // Fallback to a bundled asset path if public image is missing
+          const target = e.currentTarget as HTMLImageElement;
+          if (!target.dataset.fallback) {
+            target.dataset.fallback = '1';
+            target.src = `${import.meta.env.BASE_URL ?? '/'}assets/abae2ce4402ffd267d03df7476134886e0fe5379-DHwVpZ4N.png`;
+          }
+        }}
+      />
       <div className="relative flex items-end h-full px-4 md:px-12 lg:px-16 pb-8 md:pb-12 lg:pb-16">
         <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-4">
           <Content />
