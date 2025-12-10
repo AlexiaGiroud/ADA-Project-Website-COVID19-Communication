@@ -58,10 +58,13 @@ export function SingleCellDataset() {
 
       {/* 5.4 Dotplot (Gene Expression) */}
       <div className="space-y-6">
-        <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[400px]">
-          <p className="text-gray-400 text-xl text-center">
-            📊 Place for Dotplot of gene expression
-          </p>
+        <div className="bg-[#1A1A1A] rounded-xl overflow-hidden border-2 border-[#C07DFF]/30">
+          <iframe
+            title="Dotplot — gene expression"
+            src="https://alexiagiroud.github.io/avADAkedavra25_website/dotplot_gene_expression.html"
+            className="w-full"
+            style={{ height: 650, border: 0 }}
+          />
         </div>
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">

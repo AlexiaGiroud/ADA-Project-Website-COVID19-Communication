@@ -1,3 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dotplot — Gene Expression</title>
+    <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+    <script src="https://cdn.plot.ly/plotly-3.3.0.min.js" crossorigin="anonymous"></script>
+    <style>html,body{height:100%;margin:0;background:#1A1A1A;color:#fff}#plot{width:100%;height:100%;min-height:600px}</style>
+  </head>
+  <body>
+    <div id="plot"></div>
+    <script>
+      // Simple example dotplot — replace with your exported Plotly figure
+      const trace = {
+        x: ['GeneA','GeneB','GeneC','GeneD'],
+        y: ['CellType1','CellType2','CellType3'],
+        marker: {size: [20,40,60,80]},
+        mode: 'markers',
+        type: 'scatter'
+      };
+      const layout = {
+        title: 'Dotplot — gene expression (example)',
+        paper_bgcolor: '#1A1A1A',
+        plot_bgcolor: '#1A1A1A',
+        font: {color: '#E5E7EB'},
+        margin: {t:40,l:60,r:20,b:60}
+      };
+      Plotly.newPlot('plot', [trace], layout, {responsive: true});
+    </script>
+  </body>
+</html>
 <html>
 <head><meta charset="utf-8" /></head>
 <body>
