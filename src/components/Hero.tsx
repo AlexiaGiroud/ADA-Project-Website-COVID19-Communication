@@ -1,4 +1,6 @@
-// Use public hero image. Build-time base is available via import.meta.env.BASE_URL
+import { useEffect, useState } from "react";
+
+// Prefer a public hero image so it's easy to update without rebuilding.
 const heroSrc = `${import.meta.env.BASE_URL ?? '/'}hero.png`;
 
 function Content() {
@@ -13,24 +15,24 @@ function Content() {
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[500px] max-h-[900px]" data-name="Hero 1">
+    <section className="relative w-full h-screen min-h-[600px]" data-name="Hero 1">
       <img
         alt="Hero background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
         src={heroSrc}
         onError={(e) => {
-          // Fallback to a bundled asset path if public image is missing
-          const target = e.currentTarget as HTMLImageElement;
-          if (!target.dataset.fallback) {
-            target.dataset.fallback = '1';
-            target.src = `${import.meta.env.BASE_URL ?? '/'}assets/abae2ce4402ffd267d03df7476134886e0fe5379-DHwVpZ4N.png`;
+          const t = e.currentTarget as HTMLImageElement;
+          // fallback to built asset if public file not present
+          if (!t.dataset.fallback) {
+            t.dataset.fallback = '1';
+            t.src = `${import.meta.env.BASE_URL ?? '/'}assets/index-D4gPand5.css`.replace('.css', '.png');
           }
         }}
       />
-      <div className="relative flex items-end h-full px-4 md:px-12 lg:px-16 pb-8 md:pb-12 lg:pb-16">
-        <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-4">
+      <div className="relative flex items-end h-full px-6 md:px-12 lg:px-16 pb-12 md:pb-16">
+        <div className="w-full max-w-7xl mx-auto flex justify-between items-end">
           <Content />
-          <p className="text-xs text-white/60 mb-1 md:mb-2 whitespace-nowrap">
+          <p className="text-xs text-white/60 mb-2">
             AI generated image
           </p>
         </div>
