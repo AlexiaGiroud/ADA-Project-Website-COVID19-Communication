@@ -40,7 +40,6 @@ export function SingleCellDataset() {
       {/* 5.3 UMAP (Initial Clustering) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 bg-gradient-to-br from-[#D61C8C]/30 via-[#C07DFF]/30 to-[#FFC9E9]/30 rounded-3xl p-2">
-          <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden">
             <iframe 
               src="https://alexiagiroud.github.io/avADAkedavra25_website/umap_complete_website.html" 
               className="w-full h-[850px] border-0"
@@ -48,7 +47,6 @@ export function SingleCellDataset() {
               style={{ background: 'transparent' }}
             />
           </div>
-        </div>
         <div className="lg:col-span-1 bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30 flex items-center">
           <p className="text-gray-300 text-lg">
             📝 Text placeholder for UMAP insights
@@ -58,14 +56,12 @@ export function SingleCellDataset() {
 
       {/* 5.4 Dotplot (Gene Expression) */}
       <div className="space-y-6">
-        <div className="bg-[#1A1A1A] rounded-xl overflow-hidden border-2 border-[#C07DFF]/30">
-          <iframe
-            title="Dotplot — gene expression"
-            src="https://alexiagiroud.github.io/avADAkedavra25_website/dotplot_gene_expression.html"
-            className="w-full"
-            style={{ height: 650, border: 0 }}
-          />
-        </div>
+        <iframe
+          title="Dotplot — gene expression"
+          src="https://alexiagiroud.github.io/avADAkedavra25_website/dotplot_gene_expression.html"
+          className="w-full"
+          style={{ height: 650, border: 0 }}
+        />
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
             📝 Why do we look at different severities?
