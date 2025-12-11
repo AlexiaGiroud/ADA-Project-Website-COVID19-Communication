@@ -53,7 +53,7 @@
         '@': path.resolve(__dirname, './src'),
       },
     },
-    base: '/avADAkedavra25_website/',
+    base: './',
     build: {
       target: 'esnext',
       outDir: 'docs',
