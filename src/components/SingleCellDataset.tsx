@@ -43,7 +43,7 @@ export function SingleCellDataset() {
       <div className="lg:col-span-2 rounded-3xl p-0">
         <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden">
           <iframe 
-            src="https://alexiagiroud.github.io/avADAkedavra25_website/umap_complete_website.html" 
+            src="https://alexiagiroud.github.io/avADAkedavra25_website/figures/umap_complete_website.html" 
             className="w-full h-[850px] border-0"
             title="UMAP colored by initial clustering"
             style={{ background: 'transparent' }}
