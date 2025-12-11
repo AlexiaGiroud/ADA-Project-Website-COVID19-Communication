@@ -24,20 +24,28 @@ export function SingleCellDataset() {
 
       {/* 5.2 Treemap Section */}
       <div className="space-y-6">
-        <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden">
-          <iframe
-            src="https://alexiagiroud.github.io/avADAkedavra25_website/figures/treemap_mode_mapped.html"
-            className="w-full h-full border-0"
-            title="Treemap: mode mapped"
-            style={{ background: 'transparent' }}
-          />
-        </div>
+
+        {/* Figure en taille originale, sans cadre */}
+        <iframe
+          src="https://alexiagiroud.github.io/avADAkedavra25_website/figures/treemap_mode_mapped.html"
+          className="w-full"
+          style={{ 
+            height: "650px",   // Ajuste si tu veux la taille exacte de ton HTML
+            border: "none",
+            background: "transparent"
+          }}
+          title="Treemap: mode mapped"
+        />
+
+        {/* Texte explicatif */}
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
             📝 What we can see on the Treemap.
           </p>
         </div>
+
       </div>
+
 
       {/* 5.3 UMAP (Initial Clustering) */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
