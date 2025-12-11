@@ -52,14 +52,12 @@ export function SingleCellDataset() {
 
       {/* LEFT – UMAP (no purple background) */}
       <div className="lg:col-span-2 rounded-3xl p-0">
-        <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden">
           <iframe 
             src="https://alexiagiroud.github.io/avADAkedavra25_website/figures/umap_complete_website.html" 
             className="w-full h-[850px] border-0"
             title="UMAP colored by initial clustering"
             style={{ background: 'transparent' }}
           />
-        </div>
       </div>
 
       {/* RIGHT – Text card (keeps purple accents) */}
@@ -74,16 +72,21 @@ export function SingleCellDataset() {
 
       {/* 5.4 Dotplot (Gene Expression) */}
       <div className="space-y-6">
-        <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[400px]">
-          <p className="text-gray-400 text-xl text-center">
-            📊 Place for Dotplot of gene expression
-          </p>
+        <iframe
+          src="https://alexiagiroud.github.io/avADAkedavra25_website/figures/dotplot_gene_expression.html"
+          className="w-full"
+          style={{ 
+            height: "850px",   // Adjust here the height to fit your HTML content
+            border: "none",
+            background: "transparent"
+          }}
+          title="Dotplot: gene expression"
+        />
         </div>
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
             📝 Why do we look at different severities?
           </p>
-        </div>
       </div>
     </div>
   );
