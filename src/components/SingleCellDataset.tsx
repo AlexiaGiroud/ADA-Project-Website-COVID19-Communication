@@ -22,12 +22,15 @@ export function SingleCellDataset() {
         </div>
       </div>
 
-      {/* 5.2 Treemap Section (placeholder) */}
+      {/* 5.2 Treemap Section */}
       <div className="space-y-6">
-        <div className="bg-[#2A2A2A] rounded-xl p-12 border-2 border-[#C07DFF]/30 flex items-center justify-center min-h-[300px]">
-          <p className="text-gray-400 text-xl text-center">
-            📊 Place for Treemap interactive figure (placeholder)
-          </p>
+        <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden">
+          <iframe
+            src="https://alexiagiroud.github.io/avADAkedavra25_website/figures/treemap_mode_mapped.html"
+            className="w-full h-[650px] border-0"
+            title="Treemap: mode mapped"
+            style={{ background: 'transparent' }}
+          />
         </div>
         <div className="bg-[#2A2A2A] rounded-xl p-6 border-2 border-[#C07DFF]/30">
           <p className="text-gray-300 text-lg">
